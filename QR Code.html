@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code Generator</title>
+    <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>QR Code Generator</h1>
+        
+        <div class="input-group">
+            <input type="text" id="text-input" placeholder="Enter text or URL" value="https://example.com">
+            <button class="btn" onclick="generateQR()">Generate QR Code</button>
+        </div>
+        
+        <div class="options">
+            <div class="option-group">
+                <label for="color-dark">Dark Color</label>
+                <select id="color-dark">
+                    <option value="#000000">Black</option>
+                    <option value="#4361ee">Blue</option>
+                    <option value="#e63946">Red</option>
+                    <option value="#2a9d8f">Teal</option>
+                </select>
+            </div>
+            
+            <div class="option-group">
+                <label for="color-light">Light Color</label>
+                <select id="color-light">
+                    <option value="#ffffff">White</option>
+                    <option value="#f8f9fa">Light Gray</option>
+                    <option value="#fffacd">Lemon Chiffon</option>
+                    <option value="#e9f5ff">Light Blue</option>
+                </select>
+            </div>
+            
+            <div class="option-group">
+                <label for="qr-size">Size</label>
+                <select id="qr-size">
+                    <option value="200">200px</option>
+                    <option value="150">150px</option>
+                    <option value="250">250px</option>
+                    <option value="300">300px</option>
+                </select>
+            </div>
+        </div>
+        
+        <div id="qrcode"></div>
+        <button id="download" class="btn download-btn" onclick="downloadQR()">Download QR Code</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
